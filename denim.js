@@ -19,6 +19,14 @@ module.exports = {
       validate: function (val) {
         return !!val.trim() || "A description must be entered!";
       }
-    },
-  ]
+    }
+  ],
+
+  derived: {
+    _templatesFilter: function(data, cb) {
+      return cb(null, function(filepath, isIncluded) {
+        return isIncluded;
+      });
+    }
+  }
 };
