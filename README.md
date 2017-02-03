@@ -12,7 +12,7 @@ ReactJS application starter template for use with [denim](http://github.com/Form
 - Polyfills
 - React Router v4
 - React Helmet
-- Babel (stage-0, react, 2015, constant-elements)
+- Babel (`stage-0, react, 2015, constant-elements`)
 - Webpack 2
   - `System.import` code splitting
   - Loaders: `babel, css, style, postcss, json, file, url`

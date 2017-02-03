@@ -4,24 +4,13 @@
 
 ##Usage
 
-Get started by running:
+- Run `yarn` or `npm install`
+- Run `npm run dev` and open `localhost:3000` to view your running application
 
-`npm run dev`
+## Scripts
 
-and then navigating to: [http://localhost:3000](http://localhost:3000)
-
-You can build your app by running:
-
-`npm run build`
-
-Once built, you can then run your app in prod by running:
-
-`npm run prod`
-
-You can lint independently of the dev server by running:
-
-`npm run lint`
-
-Testing and coverage is run using:
-
-`npm run test`
+- `npm run build` - Builds a production version of your application
+- `npm run dev` - Starts your development server
+- `npm run lint` - Eslint checks your code 
+- `npm run prod` - Starts your production server, serves your build folder
+- `npm run test` - Runs Mocha tests & coverage
