@@ -1,6 +1,6 @@
 {
   "name": "denim-react-app",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Formidable react template for denim",
   "main": "denim.js",
   "scripts": {
