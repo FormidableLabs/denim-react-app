@@ -105,7 +105,7 @@ module.exports = {
       { from: 'manifest.webmanifest' }
     ]),
     new SWPrecacheWebpackPlugin({
-      cacheId: 'formidable-react-starter',
+      cacheId: '<%= name %>',
       filename: 'service-worker.js'
     })
   ]
