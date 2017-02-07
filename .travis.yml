@@ -1,0 +1,42 @@
+
+language: node_js
+
+node_js:
+  # TODO: Support a Node v4 version
+  # https://github.com/FormidableLabs/denim-react-app/issues/3
+  #- "4"
+  - "5"
+  - "6"
+
+sudo: false
+
+branches:
+  only:
+    - master
+
+before_install:
+  # GUI for real browsers.
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+script:
+  # Check module.
+  - node --version
+  - npm --version
+  # TODO: npm run test
+
+  # Initialize a fresh project from templates
+  - npm install -g denim
+  - mkdir .test-project-tmp
+  - cd .test-project-tmp
+  - >-
+    denim $PWD/.. --prompts='{
+    "name":"whiz-bang",
+    "description":"Whiz Bang",
+    "destination":"whiz-bang"}'
+
+  # Run initialized project's own CI.
+  - cd whiz-bang
+  - npm install
+  - npm run lint
+  - npm run test
